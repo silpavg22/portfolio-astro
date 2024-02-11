@@ -1,0 +1,34 @@
+---
+import EducationItem from "./EducationItem.astro"
+const EXPERIENCIE = [
+  {
+    date: "Jan 2022 - Dec 2023",
+    title: "Master of Science - MS, Computer Science and Engineering",
+    company: "The University of Texas at Arlington",
+    description:"Architected a document-centric chat application “Talk to Your Document” leveraging AWS infrastructure. This innovative system allows for the seamless uploading of documents, enabling users to submit queries about the document, whereupon pertinent responses are systematically retrieved and presented in a responsive manner",
+    // link: "https://twitch.tv/midudev",
+  },
+  {
+    date: "2015 - 2017",
+    title: "Master of Technology (MTech), Computer Science",
+    company: "Sree Chitra Thirunal College of Engineering",
+    description:"Contributed to “iCargo” project which is an air cargo management platform. Spearheaded the development of dynamic webpages that optimized cargo check-in services, enabling clients to effortlessly track their crew. Also, played a vital role in crafting the iCargo Android app. Consistently met project deadlines and upheld a commitment to delivering exceptional client service, ensuring client satisfaction throughout the project lifecycle",
+  },
+  { 
+    date: "2011 - 2015",
+    title: "Bachelor of Technology (B.Tech.), Computer Science",
+    company: "University of Kerala",
+    description:"Collaborated on the Secure project, a web-based government application for precise cost estimation and project approval. Developed specialized web applications for in-depth cost analysis, ensuring accurate estimates and expediting government project approvals"
+  }
+]
+---
+
+<ol class="relative mt-16">
+  {
+    EXPERIENCIE.map((experiencie) => (
+      <li class="">
+        <EducationItem {...experiencie} />
+      </li>
+    ))
+  }
+</ol>
