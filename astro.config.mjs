@@ -7,5 +7,4 @@ import robotsTxt from "astro-robots-txt"
 export default defineConfig({
   integrations: [tailwind(), robotsTxt()],
   site: 'https://silpavg22.github.io',
-  base: '/my-repo',
 })
