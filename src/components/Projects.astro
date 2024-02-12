@@ -19,20 +19,39 @@ const TAGS = {
 }
 const PROJECTS = [
   {
-    title: "SVGL - A beautiful library with SVG logos",
+    title: "One Mart",
     description:
-      "Biblioteca de logos SVG de las marcas más populares. +10k visitas al mes. +2K svgs descargados. Creado desde cero con Next.js, React y Tailwind CSS.",
+      "An application for students for forming clubs, buying/selling products, creating posts etc.",
     link: "https://svgl.vercel.app/",
-    github: "https://github.com/pheralb/svgl",
-    image: "/projects/svgl.webp",
+    github: "https://github.com/silpavg22/OneMartApp",
+    image: "/portfolio-astro/onemart.png",
     tags: [TAGS.NEXT, TAGS.TAILWIND],
   },
   {
-    title: "AdventJS - Retos de programación con JavaScript y TypeScript",
+    title: "Online test application using AWS",
     description:
-      "Plataforma gratuita con retos de programación. Más de 1 millón de visitas en un mes. +50K retos completados. Creada desde cero con Next.js, React y Tailwind CSS.",
+      "An timer based online grading system with an admin, tutor and student. Deployed and tested using 3 AWS instances for security, one for each user",
     link: "https://adventjs.dev",
-    image: "/projects/adventjs.webp",
+    github : "https://github.com/silpavg22/OnlineTestApp",
+    image: "/portfolio-astro/test.jpg",
+    tags: [TAGS.NEXT, TAGS.TAILWIND],
+  },
+  {
+    title: "AWS Web Interface Picture Site ",
+    description:
+      "To provide a picture viewing and profile creating service and UI. The web page will display the images uploaded, profile entered by user and can be edited as well.",
+    link: "https://adventjs.dev",
+    github : "https://github.com/silpavg22/Cloud-Gallery",
+    image: "/portfolio-astro/picturesite.png",
+    tags: [TAGS.NEXT, TAGS.TAILWIND],
+  },
+  {
+    title: "AWS Data Repository Performance (Reddis and SQL Database)",
+    description:
+      "To compare performance on SQL tables and from Reddis: creating, querying, modifying data (tuples). ",
+    link: "https://adventjs.dev",
+    github : "https://github.com/silpavg22/RedisAWS",
+    image: "/portfolio-astro/redissql.png",
     tags: [TAGS.NEXT, TAGS.TAILWIND],
   },
 ]
@@ -44,7 +63,7 @@ const PROJECTS = [
     <article class="flex flex-col space-x-0 space-y-8 group md:flex-row md:space-x-8 md:space-y-0">
   <div class="w-full md:w-1/2">
     <div class="relative flex flex-col items-center col-span-6 row-span-5 gap-8 transition duration-500 ease-in-out transform shadow-xl overflow-clip rounded-xl sm:rounded-xl md:group-hover:-translate-y-1 md:group-hover:shadow-2xl lg:border lg:border-gray-800 lg:hover:border-gray-700 lg:hover:bg-gray-800/50">
-      <img alt="Recién llegado vs 5 años en Nueva Zelanda" class="object-cover object-top w-full h-56 transition duration-500 sm:h-full md:scale-110 md:group-hover:scale-105" loading="lazy" src={image} />
+      <img  class="object-cover object-top w-full h-56 transition duration-500 sm:h-full md:scale-110 md:group-hover:scale-105" loading="lazy" src={image} />
     </div>
   </div>
 
