@@ -1,10 +1,8 @@
 name: Deploy Astro to GitHub Pages
 
 on:
-  # Trigger the workflow every time you push to the `main` branch
   push:
     branches: [ main ]
-  # Allows you to run this workflow manually from the Actions tab on GitHub.
   workflow_dispatch:
 
 jobs:
@@ -28,14 +26,14 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-artifact@v2
         with:
-          name: astro-build
+          name: astro-build  # Match this name with the name used in the download step
           path: ./dist
 
   deploy:
     permissions:
       contents: read
       pages: write
-      id-token: write  # Add this line
+      id-token: write
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
@@ -43,6 +41,12 @@ jobs:
     runs-on: ubuntu-latest
     name: Deploy
     steps:
+      - name: Download artifact
+        uses: actions/download-artifact@v2
+        with:
+          name: astro-build  # Match this name with the name used in the upload step
+          path: ./dist
+
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
