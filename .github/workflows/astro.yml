@@ -47,10 +47,11 @@ jobs:
         with:
           name: astro-build
           path: ./dist
-
+  
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
+          permissions: id-token:write # Explicitly specify permissions
           publish_dir: ./dist
