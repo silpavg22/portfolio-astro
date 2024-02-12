@@ -12,6 +12,20 @@ import Projects from "@/components/Projects.astro"
 import SectionContainer from "@/components/SectionContainer.astro"
 import Hero from "@/components/Hero.astro"
 ---
+<style is:inline>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-P651DV68HF"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+  
+    gtag('config', 'G-P651DV68HF');
+  </style>
+
+<script is:inline>
+  /* inline: relative & npm package imports are not supported. */
+  console.log('I am inlined right here in the final output HTML.');
+</script>
 
 <Layout
   title="Porfolio Silpa experience"
