@@ -4,6 +4,7 @@ import NextJS from "./icons/NextJS.astro"
 import Tailwind from "./icons/Tailwind.astro"
 import Link from "./icons/Link.astro"
 import LinkButton from "./LinkButton.astro"
+import Medium from "./icons/Medium.astro"
 
 const TAGS = {
   NEXT: {
@@ -26,6 +27,7 @@ const PROJECTS = [
     github: "https://github.com/silpavg22/Titanic-Challenge",
     image: "/portfolio-astro/titanic.jpg",
     tags: [TAGS.NEXT, TAGS.TAILWIND],
+    medium : "https://medium.com/@silpavg22/titanic-survival-prediction-using-machine-learning-c69fc8172360",
   },
   {
     title: "Facial Emotion Recognition Using Deep Learning Methods",
@@ -35,6 +37,7 @@ const PROJECTS = [
     github : "https://github.com/silpavg22/Image-Classification-using-CNN",
     image: "/portfolio-astro/facial.png",
     tags: [TAGS.NEXT, TAGS.TAILWIND],
+    medium : "https://medium.com/@silpavg22/facial-emotion-recognition-using-deep-learning-methods-2d8971a57cf2",
   },
   {
     title: "Reddit Comments Classification Using Machine Learning Algorithms",
@@ -43,14 +46,15 @@ const PROJECTS = [
     link: "https://adventjs.dev",
     github : "https://github.com/silpavg22/Reddit-Comments-Classification",
     image: "/portfolio-astro/reddit.png",
-    tags: [TAGS.NEXT, TAGS.TAILWIND],
+    tags: [TAGS.TAILWIND],
+    medium : "https://medium.com/@silpavg22/reddit-comments-classification-using-machine-learning-3252a0157fbe",
   }
 ]
 ---
 
 <div class="flex flex-col gap-y-16">
   {
-    PROJECTS.map(({ image, title, description, tags, link, github }) => (
+    PROJECTS.map(({ image, title, description, link, github, medium }) => (
     <article class="flex flex-col space-x-0 space-y-8 group md:flex-row md:space-x-8 md:space-y-0">
   <div class="w-full md:w-1/2">
     <div class="relative flex flex-col items-center col-span-6 row-span-5 gap-8 transition duration-500 ease-in-out transform shadow-xl overflow-clip rounded-xl sm:rounded-xl md:group-hover:-translate-y-1 md:group-hover:shadow-2xl lg:border lg:border-gray-800 lg:hover:border-gray-700 lg:hover:bg-gray-800/50">
@@ -64,16 +68,15 @@ const PROJECTS = [
     </h3>
     <div class="flex flex-wrap mt-2">
       <ul class="flex flex-row mb-2 gap-x-2">
-          {tags.map((tag) => (
             <li>
               <span
                 class={`flex gap-x-2 rounded-full text-xs  py-1 px-2 `}
               >
-                
+             
                 
               </span>
             </li>
-          ))}
+       
         </ul>
 
       <div class="mt-2 text-gray-700 dark:text-gray-400">{description}</div>
@@ -82,6 +85,14 @@ const PROJECTS = [
             <LinkButton href={github}>
               <GitHub class="size-6" />
               Code
+              
+            </LinkButton>
+          )}
+
+          {medium && (
+            <LinkButton href={medium}>
+              <Medium class="size-6" />
+              Blog
               
             </LinkButton>
           )}
