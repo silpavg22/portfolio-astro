@@ -13,25 +13,24 @@ import BlogPost from "@/components/BlogPost.astro"
 import SectionContainer from "@/components/SectionContainer.astro"
 import Hero from "@/components/Hero.astro"
 ---
-<style is:inline>
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-P651DV68HF"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-  
-    gtag('config', 'G-P651DV68HF');
-  </style>
-
-<script is:inline>
-  /* inline: relative & npm package imports are not supported. */
-  console.log('I am inlined right here in the final output HTML.');
-</script>
 
 <Layout
   title="Silpa's Portfolio "
   description="Contrata a midudev para crear tu aplicación web o móvil. Desarrollador Web y Creador de Contenido. Especializado en crear aplicaciones únicas."
 >
+<head>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-P651DV68HF"></script>
+  <script type="text/partytown" src="https://www.googletagmanager.com/gtag/js?id=YOUR-ID-HERE"></script>
+  <script type="text/partytown">
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-P651DV68HF');
+  </script>
+<!-- End Google Tag Manager -->
+  </script:inline>
+</head>
   <main class="px-4">
     <SectionContainer class="py-16 md:py-36">
       <Hero>
